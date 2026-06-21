@@ -116,7 +116,7 @@ export const Skills = () => {
                       transition={{ type: 'spring', stiffness: 300 }}
                     >
                       {IconComponent && (
-                        <IconComponent className="w-12 h-12 text-blue-400 mb-4 group-hover:text-purple-400 transition-colors" />
+                        <IconComponent className="w-12 h-12 mb-4 group-hover:text-purple-400 transition-colors" style={{ color: '#64a6f8' }} />
                       )}
                       <p className="text-sm font-semibold text-gray-300">{skill.name}</p>
                     </motion.div>

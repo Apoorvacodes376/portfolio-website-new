@@ -23,13 +23,13 @@ export const About = () => {
             transition={{ duration: 0.8 }}
           >
             <p className="text-lg text-gray-300 leading-relaxed mb-8">
-              I'm a passionate Computer Science student interested in full-stack development, machine learning, AI, and creating meaningful digital experiences.
+              I'm a passionate Computer Science student interested in full-stack development, machine learning, AI, and creating meaningful digital experiences with a 
             </p>
 
             <div className="space-y-4">
               <div className="glass p-6 rounded-lg hover-glow">
                 <h3 className="font-semibold text-lg mb-2">Education</h3>
-                <p className="text-gray-400">Bachelor of Engineering in Computer Science</p>
+                <p className="text-gray-400">Bachelor of Engineering in Computer Science and Engineering</p>
               </div>
 
               <div className="glass p-6 rounded-lg hover-glow">
@@ -71,7 +71,7 @@ export const About = () => {
               transition={{ type: 'spring', stiffness: 300 }}
             >
               <div className="text-4xl font-bold gradient-text mb-2">2+</div>
-              <p className="text-gray-400">Years</p>
+              <p className="text-gray-400">Internships and Hackathons</p>
             </motion.div>
 
             <motion.div
