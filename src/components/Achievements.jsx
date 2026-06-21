@@ -77,7 +77,7 @@ export const Achievements = () => {
               return (
                 <motion.div
                   key={idx}
-                  className="md:flex md:items-center"
+                  className={`md:flex ${idx === 1 || idx === 3 ? 'md:flex-col md:items-end' : 'md:items-center'}`}
                   variants={itemVariants}
                 >
                   {/* Left Content (Desktop) / Content (Mobile) */}
