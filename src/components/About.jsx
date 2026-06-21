@@ -22,19 +22,19 @@ export const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-lg text-gray-300 leading-relaxed mb-8">
+            <p className="text-lg text-gray-300 leading-relaxed mb-8 text-light-primary">
               I'm a passionate Computer Science student interested in full-stack development, machine learning, AI, and creating meaningful digital experiences with a 
             </p>
 
             <div className="space-y-4">
               <div className="glass p-6 rounded-lg hover-glow">
-                <h3 className="font-semibold text-lg mb-2">Education</h3>
-                <p className="text-gray-400">Bachelor of Engineering in Computer Science and Engineering</p>
+                <h3 className="font-semibold text-lg mb-2 text-light-primary">Education</h3>
+                <p className="text-gray-400 text-light-secondary">Bachelor of Engineering in Computer Science and Engineering</p>
               </div>
 
               <div className="glass p-6 rounded-lg hover-glow">
-                <h3 className="font-semibold text-lg mb-2">Experience</h3>
-                <p className="text-gray-400">Student Developer | Multiple Internships</p>
+                <h3 className="font-semibold text-lg mb-2 text-light-primary">Experience</h3>
+                <p className="text-gray-400 text-light-secondary">Student Developer | Multiple Internships</p>
               </div>
             </div>
           </motion.div>
@@ -53,7 +53,7 @@ export const About = () => {
               transition={{ type: 'spring', stiffness: 300 }}
             >
               <div className="text-4xl font-bold gradient-text mb-2">15+</div>
-              <p className="text-gray-400">Projects</p>
+              <p className="text-gray-400 text-light-tertiary">Projects</p>
             </motion.div>
 
             <motion.div
@@ -62,7 +62,7 @@ export const About = () => {
               transition={{ type: 'spring', stiffness: 300 }}
             >
               <div className="text-4xl font-bold gradient-text mb-2">15+</div>
-              <p className="text-gray-400">Certifications</p>
+              <p className="text-gray-400 text-light-tertiary">Certifications</p>
             </motion.div>
 
             <motion.div
@@ -71,7 +71,7 @@ export const About = () => {
               transition={{ type: 'spring', stiffness: 300 }}
             >
               <div className="text-4xl font-bold gradient-text mb-2">2+</div>
-              <p className="text-gray-400">Internships and Hackathons</p>
+              <p className="text-gray-400 text-light-tertiary">Internships and Hackathons</p>
             </motion.div>
 
             <motion.div
@@ -80,7 +80,7 @@ export const About = () => {
               transition={{ type: 'spring', stiffness: 300 }}
             >
               <div className="text-4xl font-bold gradient-text mb-2">7</div>
-              <p className="text-gray-400">Languages</p>
+              <p className="text-gray-400 text-light-tertiary">Languages</p>
             </motion.div>
           </motion.div>
         </div>

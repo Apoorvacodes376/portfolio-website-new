@@ -31,11 +31,11 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             </button>
 
             <div className="p-8">
-              <h3 className="text-3xl font-bold gradient-text mb-4 font-heading">{project.title}</h3>
-              <p className="text-gray-300 mb-6">{project.fullDescription}</p>
+              <h3 className="text-3xl font-bold gradient-text mb-4 font-heading text-light-primary">{project.title}</h3>
+              <p className="text-gray-300 mb-6 text-light-primary">{project.fullDescription}</p>
 
               <div className="mb-6">
-                <p className="text-sm text-gray-400 mb-2">Tech Stack:</p>
+                <p className="text-sm text-gray-400 mb-2 text-light-secondary">Tech Stack:</p>
                 <div className="flex flex-wrap gap-2">
                   {project.techStack.map((tech) => (
                     <span key={tech} className="px-3 py-1 bg-blue-500 bg-opacity-20 border border-blue-500 rounded-full text-sm">

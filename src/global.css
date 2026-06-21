@@ -194,3 +194,51 @@ html[data-theme='light'] ::placeholder {
   box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
   transform: translateY(-2px);
 }
+
+/* Theme-aware text colors */
+.text-light-primary {
+  color: #ffffff;
+}
+
+html[data-theme='light'] .text-light-primary {
+  color: #1a1a1a;
+}
+
+.text-light-secondary {
+  color: #d1d5db;
+}
+
+html[data-theme='light'] .text-light-secondary {
+  color: #4b5563;
+}
+
+.text-light-tertiary {
+  color: #9ca3af;
+}
+
+html[data-theme='light'] .text-light-tertiary {
+  color: #6b7280;
+}
+
+/* Specific gray text overrides */
+html[data-theme='light'] .text-gray-300 {
+  color: #374151;
+}
+
+html[data-theme='light'] .text-gray-400 {
+  color: #6b7280;
+}
+
+html[data-theme='light'] .text-gray-500 {
+  color: #9ca3af;
+}
+
+/* Icons theme-aware */
+html[data-theme='light'] svg {
+  color: inherit;
+}
+
+/* White text in light mode */
+html[data-theme='light'] .text-white {
+  color: #1a1a1a;
+}

@@ -107,7 +107,7 @@ export default function Hero() {
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 p-1">
                 <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
                   <div className="text-6xl font-bold gradient-text font-heading">
-                    JD
+                    GA
                   </div>
                 </div>
               </div>

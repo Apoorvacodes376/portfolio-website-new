@@ -26,7 +26,7 @@ export const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <motion.div
-            className="text-2xl font-bold gradient-text font-heading"
+            className="text-2xl font-bold gradient-text font-heading text-light-primary"
             whileHover={{ scale: 1.05 }}
           >
             GVLA
@@ -39,7 +39,7 @@ export const Navbar = () => {
                 key={link.href}
                 href={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-sm font-medium transition-colors text-light-secondary ${
                   activeSection === link.href.replace('#', '')
                     ? 'text-blue-400'
                     : 'text-gray-300 hover:text-white'

@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
 import * as SiIcons from 'react-icons/si';
 import * as FaIcons from 'react-icons/fa';
+import * as DiIcons from 'react-icons/di';
 
 const getIcon = (iconName) => {
-  const allIcons = { ...SiIcons, ...FaIcons };
+  const allIcons = { ...SiIcons, ...FaIcons, ...DiIcons };
   return allIcons[iconName] || null;
 };
 
@@ -15,7 +16,7 @@ export const Skills = () => {
         { name: 'C', icon: 'SiC' },
         { name: 'C++', icon: 'SiCplusplus' },
         { name: 'Python', icon: 'SiPython' },
-        { name: 'Java', icon: 'SiJava' },
+        { name: 'Java', icon: 'DiJava' },
         { name: 'JavaScript', icon: 'SiJavascript' },
       ],
     },
@@ -96,7 +97,7 @@ export const Skills = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h3 className="text-2xl font-semibold mb-6 text-blue-400">{category.title}</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-blue-400" style={{ color: '#64a6f8' }}>{category.title}</h3>
 
               <motion.div
                 className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4"
@@ -116,9 +117,9 @@ export const Skills = () => {
                       transition={{ type: 'spring', stiffness: 300 }}
                     >
                       {IconComponent && (
-                        <IconComponent className="w-12 h-12 mb-4 group-hover:text-purple-400 transition-colors" style={{ color: '#64a6f8' }} />
+                        <IconComponent className="w-12 h-12 mb-4 group-hover:text-purple-400 transition-colors text-light-primary" style={{ color: '#64a6f8' }} />
                       )}
-                      <p className="text-sm font-semibold text-gray-300">{skill.name}</p>
+                      <p className="text-sm font-semibold text-gray-300 text-light-primary">{skill.name}</p>
                     </motion.div>
                   );
                 })}

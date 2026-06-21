@@ -64,7 +64,7 @@ export const Hero = () => {
         </motion.h1>
 
         <motion.p
-          className="text-xl md:text-2xl text-gray-300 mb-8 font-light"
+          className="text-xl md:text-2xl text-gray-300 mb-8 font-light text-light-secondary"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
@@ -73,7 +73,7 @@ export const Hero = () => {
         </motion.p>
 
         <motion.p
-          className="text-gray-400 text-lg mb-12 max-w-2xl mx-auto"
+          className="text-gray-400 text-lg mb-12 max-w-2xl mx-auto text-light-tertiary"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
@@ -98,7 +98,7 @@ export const Hero = () => {
 
           <motion.button
             onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-            className="flex items-center gap-2 px-8 py-4 border-2 border-purple-500 rounded-lg font-semibold hover-glow"
+            className="relative flex items-center gap-2 px-8 py-4 border-2 border-purple-500 rounded-lg font-semibold hover-glow"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -113,7 +113,7 @@ export const Hero = () => {
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex items-center justify-center">
+        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex items-center justify-center text-light-tertiary">
           <div className="w-1 h-2 bg-gray-400 rounded-full animate-pulse" />
         </div>
       </motion.div>
