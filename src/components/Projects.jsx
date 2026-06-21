@@ -108,7 +108,8 @@ export const Projects = () => {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      // className="w-full mx-auto object-cover group-hover:scale-110 transition-transform duration-300"
+                      className="block mx-auto object-cover object-center w-full place-items-center items-center group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
 

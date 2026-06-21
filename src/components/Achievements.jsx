@@ -11,7 +11,7 @@ export const Achievements = () => {
     {
       icon: FiGlobe,
       title: 'Learning German',
-      description: 'Actively learning on Duolingo with regular progress',
+      description: 'Actively learning on Duolingo with regular progress for over 590 days',
     },
     {
       icon: FiUsers,
@@ -26,7 +26,7 @@ export const Achievements = () => {
     {
       icon: FiAward,
       title: '2 Hackathons',
-      description: 'Active participant in YAH and HackHERthon events',
+      description: 'Actively participated in hackathons like YAH and HackHERthon',
     },
   ];
 

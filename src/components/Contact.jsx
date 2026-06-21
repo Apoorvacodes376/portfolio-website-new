@@ -21,17 +21,17 @@ export const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: FiMail, label: 'Email', value: 'apoorva@example.com' },
-    { icon: FiPhone, label: 'Phone', value: '+91 XXXXXXXXXX' },
-    { icon: FiMapPin, label: 'Location', value: 'India' },
+    { icon: FiMail, label: 'Email', value: 'gvlapoorva@gmail.com' },
+    { icon: FiPhone, label: 'Phone', value: '+91 6380716497' },
+    { icon: FiMapPin, label: 'Location', value: 'Chennai, India' },
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', icon: 'FaLinkedin', url: '#' },
-    { name: 'GitHub', icon: 'FaGithub', url: '#' },
-    { name: 'LeetCode', icon: 'SiLeetcode', url: '#' },
-    { name: 'Instagram', icon: 'FaInstagram', url: '#' },
-    { name: 'Duolingo', icon: 'SiDuolingo', url: '#' },
+    { name: 'LinkedIn', icon: 'FaLinkedin', url: 'https://www.linkedin.com/in/gvl-apoorva-3061ba328/' },
+    { name: 'GitHub', icon: 'FaGithub', url: 'https://github.com/Apoorvacodes376' },
+    { name: 'LeetCode', icon: 'SiLeetcode', url: 'https://leetcode.com/u/gvlapoorva/' },
+    { name: 'Instagram', icon: 'FaInstagram', url: 'https://www.instagram.com/gvl.apoorva_376/' },
+    { name: 'Duolingo', icon: 'SiDuolingo', url: 'https://www.duolingo.com/profile/Apoorva159362' },
   ];
 
   const getIcon = (iconName) => {

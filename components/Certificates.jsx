@@ -1,19 +1,21 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import * as Icons from 'lucide-react';
 import { certificatesData } from '@/lib/data/certificates';
 
-const iconMap = {
-  Award: Icons.Award,
-  Shield: Icons.Shield,
-  Database: Icons.Database,
-  TrendingUp: Icons.TrendingUp,
-};
-
 export default function Certificates() {
-  const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleCertificates = showAll
+    ? certificatesData
+    : certificatesData.slice(0, 3);
+
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -37,6 +39,7 @@ export default function Certificates() {
   return (
     <section id="certificates" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
+
         <motion.h2
           className="text-4xl md:text-5xl font-bold font-heading mb-16 text-center gradient-text"
           initial={{ opacity: 0, y: -20 }}
@@ -44,59 +47,58 @@ export default function Certificates() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Certifications & Achievements
+          Certifications
         </motion.h2>
 
         <motion.div
           ref={ref}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           variants={containerVariants}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
         >
-          {certificatesData.map((cert) => {
-            const Icon = iconMap[cert.icon] || Icons.Award;
+          {visibleCertificates.map((cert) => (
+            <motion.div
+              key={cert.id}
+              className="glass rounded-xl overflow-hidden group"
+              variants={itemVariants}
+              whileHover={{
+                y: -5,
+                scale: 1.03,
+              }}
+            >
+              <div className="h-52 overflow-hidden">
+                <img
+                  src={cert.image}
+                  alt={cert.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                />
+              </div>
 
-            return (
-              <motion.div
-                key={cert.id}
-                className="glass p-6 rounded-xl text-center hover:scale-110 transition-all cursor-pointer group"
-                variants={itemVariants}
-                whileHover={{
-                  scale: 1.1,
-                  boxShadow: '0 0 30px rgba(139, 92, 246, 0.4)',
-                  y: -5,
-                }}
-              >
-                {/* Icon */}
-                <motion.div
-                  className="flex justify-center mb-4"
-                  animate={{ y: [0, -5, 0] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  <Icon size={40} className="text-purple-500 group-hover:text-blue-500 transition-colors" />
-                </motion.div>
-
-                {/* Title */}
-                <h3 className="font-heading font-bold text-lg mb-2">
+              <div className="p-6">
+                <h3 className="font-bold text-xl mb-2">
                   {cert.title}
                 </h3>
 
-                {/* Issuer */}
-                <p className="text-gray-400 text-sm mb-4">{cert.issuer}</p>
-
-                {/* Button */}
-                <motion.button
-                  className="px-4 py-2 bg-blue-500/20 border border-blue-500/40 rounded-lg text-sm font-semibold text-blue-300 hover:bg-blue-500 hover:text-white transition-all w-full"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  View Certificate
-                </motion.button>
-              </motion.div>
-            );
-          })}
+                <p className="text-gray-400">
+                  {cert.issuer}
+                </p>
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
+
+        {certificatesData.length > 3 && (
+          <div className="flex justify-center mt-12">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="px-8 py-3 rounded-xl border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white transition-all"
+            >
+              {showAll ? 'Show Less' : 'Show More'}
+            </button>
+          </div>
+        )}
+
       </div>
     </section>
   );

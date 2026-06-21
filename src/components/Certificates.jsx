@@ -1,11 +1,7 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { CERTIFICATES } from '../data/constants';
 
 export const Certificates = () => {
-  const [showAll, setShowAll] = useState(false);
-  const visibleCertificates = showAll ? CERTIFICATES : CERTIFICATES.slice(0, 3);
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -31,7 +27,7 @@ export const Certificates = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          Certifications & Achievements
+          Certifications
         </motion.h2>
 
         <motion.div
@@ -41,7 +37,7 @@ export const Certificates = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {visibleCertificates.map((cert) => (
+          {CERTIFICATES.map((cert) => (
             <motion.div
               key={cert.id}
               className="glass rounded-lg overflow-hidden hover-glow group"
@@ -57,30 +53,17 @@ export const Certificates = () => {
               </div>
 
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-white mb-2">{cert.title}</h3>
-                <p className="text-sm text-gray-400">Obtained: {cert.date}</p>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  {cert.title}
+                </h3>
+
+                <p className="text-sm text-gray-400">
+                  Obtained: {cert.date}
+                </p>
               </div>
             </motion.div>
           ))}
         </motion.div>
-
-        {!showAll && CERTIFICATES.length > 3 && (
-          <motion.div
-            className="text-center mt-12"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            <motion.button
-              onClick={() => setShowAll(true)}
-              className="px-8 py-4 border-2 border-purple-500 rounded-lg font-semibold hover-glow transition-all"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Show More
-            </motion.button>
-          </motion.div>
-        )}
       </div>
     </section>
   );

@@ -23,7 +23,7 @@ export const About = () => {
             transition={{ duration: 0.8 }}
           >
             <p className="text-lg text-gray-300 leading-relaxed mb-8 text-light-primary">
-              I'm a passionate Computer Science student interested in full-stack development, machine learning, AI, and creating meaningful digital experiences with a 
+              I'm a passionate Computer Science student interested in full-stack development, machine learning, AI, and creating meaningful digital experiences with a knack for learning.
             </p>
 
             <div className="space-y-4">

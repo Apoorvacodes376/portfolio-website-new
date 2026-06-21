@@ -28,8 +28,8 @@ export const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl font-bold gradient-text mb-2 font-heading text-light-primary">GVLA</h2>
-            <p className="text-gray-400 text-light-secondary">Full Stack Developer & CS Student</p>
+            <h2 className="text-2xl font-bold gradient-text mb-2 font-heading text-light-primary">GA</h2>
+            <p className="text-gray-400 text-light-secondary">Web Development | Machine Learning | Design </p>
           </motion.div>
 
           {/* Quick Links */}

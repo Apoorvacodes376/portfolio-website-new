@@ -29,7 +29,7 @@ export const Navbar = () => {
             className="text-2xl font-bold gradient-text font-heading text-light-primary"
             whileHover={{ scale: 1.05 }}
           >
-            GVLA
+            GA
           </motion.div>
 
           {/* Desktop Menu */}
