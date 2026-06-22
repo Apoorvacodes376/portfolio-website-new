@@ -23,6 +23,12 @@ const AnimatedGradientBlob = ({ delay, duration, size }) => (
 );
 
 export const Hero = () => {
+  const resumeLink = 'https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing';
+
+  const handleResumeClick = () => {
+    window.open(resumeLink, '_blank');
+  };
+
   return (
     <section
       id="home"
@@ -105,7 +111,7 @@ export const Hero = () => {
           transition={{ delay: 0.8, duration: 0.8 }}
         >
           <motion.button
-            onClick={() => window.open('/resume.pdf', '_blank')}
+            onClick={handleResumeClick}
             className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg font-semibold hover-glow"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
