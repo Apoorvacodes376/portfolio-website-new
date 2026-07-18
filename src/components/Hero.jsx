@@ -23,7 +23,7 @@ const AnimatedGradientBlob = ({ delay, duration, size }) => (
 );
 
 export const Hero = () => {
-  const resumeLink = 'https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing';
+  const resumeLink = 'https://drive.google.com/file/d/1d_jQnMW-MeciTyc-yAehynrEQg3e5-Kf/view?usp=drive_link';
 
   const handleResumeClick = () => {
     window.open(resumeLink, '_blank');
