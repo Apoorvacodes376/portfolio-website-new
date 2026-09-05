@@ -86,8 +86,8 @@ export const PROJECTS = [
     description: 'Website promoting bias-free recruitment',
     image: 'https://cdn.imageurlgenerator.com/uploads/da5c336a-a442-4a2f-9ad3-1877e5abcf40.png',
     techStack: ['React', 'Express', 'MongoDB'],
-    github: 'https://github.com',
-    demo: 'https://demo.com',
+    github: 'https://github.com/Apoorvacodes376/MeritMind-HackHerThon',
+    demo: 'https://frontend-bice-beta-56.vercel.app/',
     fullDescription: 'A recruitment platform designed to eliminate bias in the hiring process.',
   },
   {
@@ -96,8 +96,8 @@ export const PROJECTS = [
     description: 'Security-focused e-commerce platform',
     image: 'https://cdn.imageurlgenerator.com/uploads/d19f2c54-05cf-40ba-ad91-af52b81ef6c3.webp',
     techStack: ['React', 'Node.js', 'PostgreSQL'],
-    github: 'https://github.com',
-    demo: 'https://demo.com',
+    github: 'https://github.com/jashwanth0420/TrustCart',
+    demo: 'https://trust-cart-vx6b.vercel.app/',
     fullDescription: 'A secure e-commerce platform with advanced security features and encryption.',
   },
 ];
@@ -198,6 +198,6 @@ export const CERTIFICATES = [
     id: 14,
     title: 'NLP Workshop by Anna University (6 Days)',
     date: '03-06-2026',
-    image: 'public/NLPCertificate.jpg',
+    image: '/NLPCertificate.jpg',
   }
 ];
