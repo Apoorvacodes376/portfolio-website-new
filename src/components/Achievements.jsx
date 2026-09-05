@@ -4,14 +4,34 @@ import { FiAward, FiTrendingUp, FiGlobe, FiUsers } from 'react-icons/fi';
 export const Achievements = () => {
   const achievements = [
     {
+      icon: FiAward,
+      title: '1 Paper Published',
+      description: 'Participated and presented and published a paper through an international conference',
+    },
+    {
+      icon: FiUsers,
+      title: 'Tech Team Lead in ACM-SVCE',
+      description: 'Managing and building websites',
+    },
+    {
+      icon: FiUsers,
+      title: 'Design Team Lead in IEEE-SVCE',
+      description: 'Designing and creating visually appealing designs for the club',
+    },
+    {
       icon: FiTrendingUp,
-      title: '50+ Day LeetCode Streak',
-      description: 'With 60 solved problems and consistent daily practice',
+      title: '125+ Day LeetCode Streak',
+      description: 'With 130+ solved problems and consistent daily practice',
     },
     {
       icon: FiGlobe,
       title: 'Learning German',
-      description: 'Actively learning on Duolingo with regular progress for over 590 days',
+      description: 'Actively learning on Duolingo with regular progress for over 650+ days',
+    },
+    {
+      icon: FiUsers,
+      title: 'Web Development member in Developer Student Community',
+      description: 'Worked on creating websites, designing and managing events',
     },
     {
       icon: FiUsers,
@@ -20,13 +40,13 @@ export const Achievements = () => {
     },
     {
       icon: FiAward,
-      title: '2 Paper Conferences',
+      title: '3 Paper Conferences',
       description: 'Participated and presented in international conferences',
     },
     {
       icon: FiAward,
       title: '2 Hackathons',
-      description: 'Actively participated in hackathons like YAH and HackHERthon',
+      description: 'Actively participated in hackathons like YAH, HackHERthon and Datasphere',
     },
   ];
 
