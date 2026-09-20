@@ -66,8 +66,12 @@ export const Achievements = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, x: -30 },
-    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, scale: 0.82 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { type: 'spring', stiffness: 120, damping: 18 },
+    },
   };
 
   return (
@@ -105,13 +109,13 @@ export const Achievements = () => {
                   className="md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-6"
                   variants={itemVariants}
                 >
-                  <div className={`${isEven ? 'md:col-start-1 md:row-start-1 md:pr-6 md:text-right' : 'md:col-start-3 md:row-start-1 md:pl-6'}`}>
+                  <div className={`${isEven ? 'md:col-start-1 md:row-start-1 md:pr-6' : 'md:col-start-3 md:row-start-1 md:pl-6'}`}>
                     <motion.div
-                      className="glass p-6 rounded-lg hover-glow"
+                      className="glass origin-center rounded-lg p-6 text-left hover-glow"
                       whileHover={{ scale: 1.03 }}
                       transition={{ type: 'spring', stiffness: 300 }}
                     >
-                      <div className={`flex items-center gap-4 mb-4 ${isEven ? 'md:justify-end' : ''}`}>
+                      <div className={`flex items-center gap-4 mb-4 ${isEven ? 'md:flex-row-reverse md:justify-end' : ''}`}>
                         <Icon className="w-6 h-6 shrink-0 text-blue-400" />
                         <h3 className="text-xl font-semibold text-white">{achievement.title}</h3>
                       </div>
