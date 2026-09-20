@@ -59,8 +59,9 @@ export const Achievements = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
+          transition: {
+        staggerChildren: 0.32,
+        delayChildren: 0.15,
       },
     },
   };
@@ -70,7 +71,7 @@ export const Achievements = () => {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { type: 'spring', stiffness: 120, damping: 18 },
+      transition: { type: 'spring', stiffness: 68, damping: 20, mass: 1.15 },
     },
   };
 
@@ -81,8 +82,8 @@ export const Achievements = () => {
           className="text-4xl md:text-5xl font-bold mb-16 gradient-text font-heading"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.35 }}
+          transition={{ duration: 1.2, ease: 'easeOut' }}
         >
           Achievements & Milestones
         </motion.h2>
@@ -93,7 +94,7 @@ export const Achievements = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.3, margin: '0px 0px -12% 0px' }}
         >
           {/* Center Line */}
           <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500" />
