@@ -31,7 +31,12 @@ export const Achievements = () => {
     {
       icon: IoLanguageSharp,
       title: 'Learning German',
-      description: 'Actively learning on Duolingo with regular progress for over 590 days',
+      description: 'Actively learning on Duolingo with regular progress for over 650+ days',
+    },
+    {
+      icon: FiUsers,
+      title: 'Web Development member in Developer Student Community',
+      description: 'Worked on creating websites, designing and managing events',
     },
     {
       icon: IoLanguageSharp,

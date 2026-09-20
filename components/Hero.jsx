@@ -64,7 +64,7 @@ export default function Hero() {
               variants={itemVariants}
             >
               <motion.a
-                href="/resume.pdf"
+                href="https://drive.google.com/file/d/1d_jQnMW-MeciTyc-yAehynrEQg3e5-Kf/view?usp=drive_link"
                 download
                 className="glass px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-blue-500 hover:text-white transition-all"
                 whileHover={{ scale: 1.05 }}
