@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { FiAward, FiTrendingUp, FiGlobe, FiUsers } from 'react-icons/fi';
+import { RiFireLine } from "react-icons/ri";
 
 export const Achievements = () => {
   const achievements = [
@@ -19,7 +20,7 @@ export const Achievements = () => {
       description: 'Designing and creating visually appealing designs for the club',
     },
     {
-      icon: FiTrendingUp,
+      icon: RiFireLine,
       title: '150+ Day LeetCode Streak',
       description: 'With 150+ solved problems and consistent daily practice',
     },
@@ -40,8 +41,8 @@ export const Achievements = () => {
     },
     {
       icon: FiAward,
-      title: '2 Hackathons',
-      description: 'Actively participated in hackathons like YAH and HackHERthon',
+      title: '4 Hackathons',
+      description: 'Actively participated in hackathons like SIH-26, DataSphere, YAH and HackHERthon',
     },
   ];
 
