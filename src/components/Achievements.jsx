@@ -120,11 +120,11 @@ export const Achievements = () => {
                     <motion.div
                       custom={isEven ? 'left' : 'right'}
                       variants={cardVariants}
-                      className="glass origin-center rounded-lg p-6 text-left hover-glow"
+                      className={`glass origin-center rounded-lg p-6 text-left hover-glow ${isEven ? 'md:text-right' : ''}`}
                       whileHover={{ scale: 1.03 }}
                       transition={{ type: 'spring', stiffness: 300 }}
                     >
-                      <div className={`flex items-center gap-4 mb-4 ${isEven ? 'md:flex-row-reverse md:justify-end' : ''}`}>
+                      <div className={`flex items-center gap-4 mb-4 ${isEven ? 'md:flex-row-reverse md:justify-start' : ''}`}>
                         <Icon className="w-6 h-6 shrink-0 text-blue-400" />
                         <h3 className="text-xl font-semibold text-white">{achievement.title}</h3>
                       </div>
