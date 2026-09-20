@@ -60,14 +60,25 @@ export const Achievements = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.16,
+        delayChildren: 0.05,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, x: -30 },
-    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
+  const cardVariants = {
+    hidden: (side) => ({ opacity: 0, x: side === 'left' ? 72 : -72, scale: 0.96 }),
+    visible: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+      transition: { type: 'spring', stiffness: 120, damping: 20, mass: 0.9 },
+    },
   };
 
   return (
@@ -77,8 +88,8 @@ export const Achievements = () => {
           className="text-4xl md:text-5xl font-bold mb-16 gradient-text font-heading"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.35 }}
+          transition={{ duration: 1.2, ease: 'easeOut' }}
         >
           Achievements & Milestones
         </motion.h2>
@@ -89,7 +100,7 @@ export const Achievements = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.15, margin: '0px 0px -8% 0px' }}
         >
           {/* Center Line */}
           <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500" />
@@ -105,13 +116,15 @@ export const Achievements = () => {
                   className="md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-6"
                   variants={itemVariants}
                 >
-                  <div className={`${isEven ? 'md:col-start-1 md:row-start-1 md:pr-6 md:text-right' : 'md:col-start-3 md:row-start-1 md:pl-6'}`}>
+                  <div className={`${isEven ? 'md:col-start-1 md:row-start-1 md:pr-6' : 'md:col-start-3 md:row-start-1 md:pl-6'}`}>
                     <motion.div
-                      className="glass p-6 rounded-lg hover-glow"
+                      custom={isEven ? 'left' : 'right'}
+                      variants={cardVariants}
+                      className={`glass origin-center rounded-lg p-6 text-left hover-glow ${isEven ? 'md:text-right' : ''}`}
                       whileHover={{ scale: 1.03 }}
                       transition={{ type: 'spring', stiffness: 300 }}
                     >
-                      <div className={`flex items-center gap-4 mb-4 ${isEven ? 'md:justify-end' : ''}`}>
+                      <div className={`flex items-center gap-4 mb-4 ${isEven ? 'md:flex-row-reverse md:justify-start' : ''}`}>
                         <Icon className="w-6 h-6 shrink-0 text-blue-400" />
                         <h3 className="text-xl font-semibold text-white">{achievement.title}</h3>
                       </div>
