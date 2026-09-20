@@ -1,30 +1,35 @@
 import { motion } from 'framer-motion';
 import { FiAward, FiTrendingUp, FiGlobe, FiUsers } from 'react-icons/fi';
+import { RiFireLine } from "react-icons/ri";
+import { TiGroupOutline } from "react-icons/ti";
+import { GrDocumentText } from "react-icons/gr";
+import { IoLanguageSharp } from "react-icons/io5";
+import { GiVideoConference } from "react-icons/gi";
 
 export const Achievements = () => {
   const achievements = [
     {
-      icon: FiAward,
+      icon: GrDocumentText,
       title: '1 Paper Published',
       description: 'Participated and presented and published a paper through an international conference',
     },
     {
-      icon: FiUsers,
+      icon: TiGroupOutline,
       title: 'Tech Team Lead in ACM-SVCE',
       description: 'Managing and building websites',
     },
     {
-      icon: FiUsers,
-      title: 'Design Team Lead in IEEE-SVCE',
+      icon: TiGroupOutline,
+      title: 'Design Team Head in IEEE-SVCE',
       description: 'Designing and creating visually appealing designs for the club',
     },
     {
-      icon: FiTrendingUp,
-      title: '125+ Day LeetCode Streak',
-      description: 'With 130+ solved problems and consistent daily practice',
+      icon: RiFireLine,
+      title: '150+ Day LeetCode Streak',
+      description: 'With 150+ solved problems and consistent daily practice',
     },
     {
-      icon: FiGlobe,
+      icon: IoLanguageSharp,
       title: 'Learning German',
       description: 'Actively learning on Duolingo with regular progress for over 650+ days',
     },
@@ -34,19 +39,19 @@ export const Achievements = () => {
       description: 'Worked on creating websites, designing and managing events',
     },
     {
-      icon: FiUsers,
+      icon: IoLanguageSharp,
       title: '7 Languages Known',
       description: 'Telugu, Tamil, Sanskrit, English, Hindi, Kannada, German',
     },
     {
-      icon: FiAward,
-      title: '3 Paper Conferences',
+      icon: GiVideoConference,
+      title: '2 Paper Conferences',
       description: 'Participated and presented in international conferences',
     },
     {
       icon: FiAward,
-      title: '2 Hackathons',
-      description: 'Actively participated in hackathons like YAH, HackHERthon and Datasphere',
+      title: '4 Hackathons',
+      description: 'Actively participated in hackathons like SIH-26, DataSphere, YAH and HackHERthon',
     },
   ];
 
@@ -97,34 +102,29 @@ export const Achievements = () => {
               return (
                 <motion.div
                   key={idx}
-                  className={`md:flex ${idx === 1 || idx === 3 ? 'md:flex-col md:items-end' : 'md:items-center'}`}
+                  className="md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-6"
                   variants={itemVariants}
                 >
-                  {/* Left Content (Desktop) / Content (Mobile) */}
-                  <div className={`md:w-1/2 ${isEven ? 'md:text-right md:pr-12' : 'md:pl-12'}`}>
+                  <div className={`${isEven ? 'md:col-start-1 md:row-start-1 md:pr-6 md:text-right' : 'md:col-start-3 md:row-start-1 md:pl-6'}`}>
                     <motion.div
                       className="glass p-6 rounded-lg hover-glow"
-                      whileHover={{ scale: 1.05 }}
+                      whileHover={{ scale: 1.03 }}
                       transition={{ type: 'spring', stiffness: 300 }}
                     >
-                      <div className="flex items-center gap-4 mb-4">
-                        <Icon className="w-6 h-6 text-blue-400" />
+                      <div className={`flex items-center gap-4 mb-4 ${isEven ? 'md:justify-end' : ''}`}>
+                        <Icon className="w-6 h-6 shrink-0 text-blue-400" />
                         <h3 className="text-xl font-semibold text-white">{achievement.title}</h3>
                       </div>
                       <p className="text-gray-400">{achievement.description}</p>
                     </motion.div>
                   </div>
 
-                  {/* Center Dot (Desktop Only) */}
                   <motion.div
-                    className="hidden md:flex md:w-0 justify-center"
+                    className="hidden md:flex md:col-start-2 md:row-start-1 justify-center"
                     whileHover={{ scale: 1.3 }}
                   >
                     <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full ring-4 ring-gray-900" />
                   </motion.div>
-
-                  {/* Right Content Placeholder (Desktop) */}
-                  <div className="hidden md:block md:w-1/2" />
                 </motion.div>
               );
             })}

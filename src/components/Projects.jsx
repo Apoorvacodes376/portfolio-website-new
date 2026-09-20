@@ -1,7 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PROJECTS } from '../data/constants';
-import { FiX, FiGithub, FiExternalLink } from 'react-icons/fi';
+import {
+  FiX,
+  FiGithub,
+  FiExternalLink,
+  FiChevronLeft,
+  FiChevronRight,
+  FiPause,
+  FiPlay,
+} from 'react-icons/fi';
 
 const ProjectModal = ({ project, isOpen, onClose }) => {
   return (
@@ -73,6 +81,23 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 
 export const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [activeProject, setActiveProject] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  const showProject = (direction) => {
+    setActiveProject((current) =>
+      (current + direction + PROJECTS.length) % PROJECTS.length,
+    );
+  };
+
+  useEffect(() => {
+    if (!isPlaying || PROJECTS.length < 2) return undefined;
+
+    const interval = window.setInterval(() => showProject(1), 5000);
+    return () => window.clearInterval(interval);
+  }, [isPlaying]);
+
+  const project = PROJECTS[activeProject];
 
   return (
     <section id="projects" className="py-20 px-4">
@@ -87,39 +112,58 @@ export const Projects = () => {
           Featured Projects
         </motion.h2>
 
-        {/* Horizontal Carousel */}
         <motion.div
-          className="overflow-x-auto pb-4 -mx-4 px-4"
+          className="relative mx-auto flex max-w-5xl items-center justify-center gap-3 md:gap-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="flex gap-6 min-w-min">
-            {PROJECTS.map((project) => (
+          <button
+            type="button"
+            aria-label="Show previous project"
+            onClick={() => showProject(-1)}
+            className="z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-blue-400/50 bg-blue-500/10 text-blue-300 transition hover:bg-blue-500/25 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
+          >
+            <FiChevronLeft size={26} />
+          </button>
+
+          <div className="min-w-0 flex-1">
+            <AnimatePresence mode="wait">
               <motion.div
                 key={project.id}
-                className="flex-shrink-0 w-80 cursor-pointer"
-                whileHover={{ y: -10 }}
+                className="mx-auto max-w-4xl cursor-pointer"
+                initial={{ opacity: 0, x: 40 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -40 }}
+                transition={{ duration: 0.35 }}
+                whileHover={{ y: -8 }}
                 onClick={() => setSelectedProject(project)}
               >
-                <div className="glass rounded-xl overflow-hidden hover-glow group">
-                  <div className="relative h-48 overflow-hidden">
+                <div className="glass overflow-hidden rounded-2xl hover-glow group">
+                  <div className="relative h-64 overflow-hidden md:h-80">
                     <img
                       src={project.image}
                       alt={project.title}
-                      // className="w-full mx-auto object-cover group-hover:scale-110 transition-transform duration-300"
-                      className="block mx-auto object-cover object-center w-full place-items-center items-center group-hover:scale-110 transition-transform duration-300"
+                      className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
 
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2 text-white">{project.title}</h3>
-                    <p className="text-gray-400 text-sm">{project.description}</p>
+                  <div className="p-7 md:p-9">
+                    <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                      <div>
+                        <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-blue-300">
+                          Featured project {activeProject + 1} of {PROJECTS.length}
+                        </p>
+                        <h3 className="text-2xl font-semibold text-white md:text-3xl">{project.title}</h3>
+                      </div>
+                      <span className="text-sm text-gray-400">Click to view details</span>
+                    </div>
+                    <p className="mt-4 text-base leading-7 text-gray-400 md:text-lg">{project.description}</p>
 
-                    <div className="mt-4 flex gap-2 flex-wrap">
-                      {project.techStack.slice(0, 2).map((tech) => (
-                        <span key={tech} className="text-xs px-2 py-1 bg-blue-500 bg-opacity-20 border border-blue-500 rounded text-blue-300">
+                    <div className="mt-6 flex flex-wrap gap-2">
+                      {project.techStack.slice(0, 4).map((tech) => (
+                        <span key={tech} className="rounded border border-blue-500/60 bg-blue-500/20 px-3 py-1 text-sm text-blue-200">
                           {tech}
                         </span>
                       ))}
@@ -127,9 +171,43 @@ export const Projects = () => {
                   </div>
                 </div>
               </motion.div>
+            </AnimatePresence>
+          </div>
+
+          <button
+            type="button"
+            aria-label="Show next project"
+            onClick={() => showProject(1)}
+            className="z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-purple-400/50 bg-purple-500/10 text-purple-300 transition hover:bg-purple-500/25 hover:text-white focus:outline-none focus:ring-2 focus:ring-purple-400"
+          >
+            <FiChevronRight size={26} />
+          </button>
+        </motion.div>
+
+        <div className="mt-7 flex items-center justify-center gap-4">
+          <button
+            type="button"
+            aria-label={isPlaying ? 'Pause project slideshow' : 'Play project slideshow'}
+            aria-pressed={isPlaying}
+            onClick={() => setIsPlaying((playing) => !playing)}
+            className="flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm text-gray-300 transition hover:border-blue-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
+          >
+            {isPlaying ? <FiPause size={15} /> : <FiPlay size={15} />}
+            {isPlaying ? 'Pause' : 'Play'}
+          </button>
+          <div className="flex gap-2" aria-label="Project slides">
+            {PROJECTS.map((project, index) => (
+              <button
+                key={project.id}
+                type="button"
+                aria-label={`Go to ${project.title}`}
+                aria-current={index === activeProject ? 'true' : undefined}
+                onClick={() => setActiveProject(index)}
+                className={`h-2 rounded-full transition-all ${index === activeProject ? 'w-8 bg-blue-400' : 'w-2 bg-gray-600 hover:bg-gray-400'}`}
+              />
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
 
       <ProjectModal

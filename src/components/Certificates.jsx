@@ -137,13 +137,9 @@ export const Certificates = () => {
                   {cert.date}
                 </p>
 
-                <motion.div
-                  className="mt-4 text-blue-400 font-semibold text-sm"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                >
+                <div className="mt-4 text-blue-400 font-semibold text-sm opacity-0 transition-opacity duration-200 group-hover:opacity-100">
                   Click to view
-                </motion.div>
+                </div>
               </div>
             </motion.div>
           ))}
