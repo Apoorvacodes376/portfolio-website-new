@@ -1,21 +1,25 @@
 import { motion } from 'framer-motion';
 import { FiAward, FiTrendingUp, FiGlobe, FiUsers } from 'react-icons/fi';
 import { RiFireLine } from "react-icons/ri";
+import { TiGroupOutline } from "react-icons/ti";
+import { GrDocumentText } from "react-icons/gr";
+import { IoLanguageSharp } from "react-icons/io5";
+import { GiVideoConference } from "react-icons/gi";
 
 export const Achievements = () => {
   const achievements = [
     {
-      icon: FiTrendingUp,
+      icon: GrDocumentText,
       title: '1 Paper Published',
       description: 'Participated and presented and published a paper through an international conference',
     },
     {
-      icon: FiTrendingUp,
+      icon: TiGroupOutline,
       title: 'Tech Team Lead in ACM-SVCE',
       description: 'Managing and building websites',
     },
     {
-      icon: FiTrendingUp,
+      icon: TiGroupOutline,
       title: 'Design Team Head in IEEE-SVCE',
       description: 'Designing and creating visually appealing designs for the club',
     },
@@ -25,17 +29,17 @@ export const Achievements = () => {
       description: 'With 150+ solved problems and consistent daily practice',
     },
     {
-      icon: FiGlobe,
+      icon: IoLanguageSharp,
       title: 'Learning German',
       description: 'Actively learning on Duolingo with regular progress for over 590 days',
     },
     {
-      icon: FiUsers,
+      icon: IoLanguageSharp,
       title: '7 Languages Known',
       description: 'Telugu, Tamil, Sanskrit, English, Hindi, Kannada, German',
     },
     {
-      icon: FiAward,
+      icon: GiVideoConference,
       title: '2 Paper Conferences',
       description: 'Participated and presented in international conferences',
     },
