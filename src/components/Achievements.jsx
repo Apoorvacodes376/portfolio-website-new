@@ -59,19 +59,25 @@ export const Achievements = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-          transition: {
-        staggerChildren: 0.32,
-        delayChildren: 0.15,
+      transition: {
+        staggerChildren: 0.16,
+        delayChildren: 0.05,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, scale: 0.82 },
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
+  const cardVariants = {
+    hidden: (side) => ({ opacity: 0, x: side === 'left' ? 72 : -72, scale: 0.96 }),
     visible: {
       opacity: 1,
+      x: 0,
       scale: 1,
-      transition: { type: 'spring', stiffness: 68, damping: 20, mass: 1.15 },
+      transition: { type: 'spring', stiffness: 120, damping: 20, mass: 0.9 },
     },
   };
 
@@ -94,7 +100,7 @@ export const Achievements = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3, margin: '0px 0px -12% 0px' }}
+          viewport={{ once: true, amount: 0.15, margin: '0px 0px -8% 0px' }}
         >
           {/* Center Line */}
           <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500" />
@@ -112,6 +118,8 @@ export const Achievements = () => {
                 >
                   <div className={`${isEven ? 'md:col-start-1 md:row-start-1 md:pr-6' : 'md:col-start-3 md:row-start-1 md:pl-6'}`}>
                     <motion.div
+                      custom={isEven ? 'left' : 'right'}
+                      variants={cardVariants}
                       className="glass origin-center rounded-lg p-6 text-left hover-glow"
                       whileHover={{ scale: 1.03 }}
                       transition={{ type: 'spring', stiffness: 300 }}
