@@ -5,8 +5,23 @@ export const Achievements = () => {
   const achievements = [
     {
       icon: FiTrendingUp,
-      title: '50+ Day LeetCode Streak',
-      description: 'With 60 solved problems and consistent daily practice',
+      title: '1 Paper Published',
+      description: 'Participated and presented and published a paper through an international conference',
+    },
+    {
+      icon: FiTrendingUp,
+      title: 'Tech Team Lead in ACM-SVCE',
+      description: 'Managing and building websites',
+    },
+    {
+      icon: FiTrendingUp,
+      title: 'Design Team Head in IEEE-SVCE',
+      description: 'Designing and creating visually appealing designs for the club',
+    },
+    {
+      icon: FiTrendingUp,
+      title: '150+ Day LeetCode Streak',
+      description: 'With 150+ solved problems and consistent daily practice',
     },
     {
       icon: FiGlobe,
