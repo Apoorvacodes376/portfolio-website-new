@@ -109,6 +109,7 @@ export const CERTIFICATES = [
     date: '20-09-2026',
     image: '/LeetCode_100days.png',
     issuer: 'LeetCode',
+    description: 'Maintained a consistent coding routine for 100 days, solving problems across data structures, algorithms, and logical problem-solving.',
   },
   {
     id: 2,
@@ -116,6 +117,7 @@ export const CERTIFICATES = [
     date: '2026',
     image: '/Certificate of Publication.jpg',
     issuer: 'IJCRT',
+    description: 'Contributed to the research, development, and documentation of a technology-driven approach to municipal waste management, combining AI, IoT, and blockchain concepts.',
   },
   {
     id: 3,
@@ -123,6 +125,7 @@ export const CERTIFICATES = [
     date: '11-06-2026',
     image: '/LeetCode_50days.png',
     issuer: 'LeetCode',
+    description: 'Built consistency in competitive problem-solving by practicing coding challenges regularly and strengthening my understanding of algorithms and data structures.',
   },
   {
     id: 4,
@@ -130,6 +133,7 @@ export const CERTIFICATES = [
     date: '20-04-2026',
     image: '/Gullapalli Venkata Lakshmi Aporva Participant certificate.png',
     issuer: 'ICICRCET 2026',
+    description: 'Presented our research work and gained experience in communicating a technical solution, explaining its methodology, architecture, and real-world applications.',
   },
   {
     id: 5,
@@ -137,6 +141,7 @@ export const CERTIFICATES = [
     date: '14-04-2026',
     image: '/WhatsApp Image 2026-06-21 at 6.39.41 PM.jpeg',
     issuer: 'HackHERthon',
+    description: 'Worked with my team to develop MeritMind, a recruitment platform focused on making the hiring process more objective and bias-aware. I contributed to the development and implementation of the project during the hackathon. Project: MeritMind. GitHub: https://github.com/Apoorvacodes376/MeritMind',
   },
   {
     id: 6,
@@ -144,6 +149,7 @@ export const CERTIFICATES = [
     date: '23-02-2026',
     image: '/WhatsApp Image 2026-06-21 at 6.39.41 PM.jpeg',
     issuer: 'Yet Another Hackathon',
+    description: 'Worked with my team to develop TrustCart, a security-focused e-commerce platform designed to improve trust and safety in online shopping. I contributed to the development and implementation of the project during the hackathon. Project: TrustCart. GitHub and live demo links will be added soon.',
   },
   {
     id: 7,
@@ -151,6 +157,7 @@ export const CERTIFICATES = [
     date: '29-01-2026',
     image: '/WhatsApp Image 2026-06-21 at 6.40.14 PM.jpeg',
     issuer: 'MongoDB',
+    description: 'Gained hands-on exposure to working with document-based databases and explored how MongoDB can be used to store, manage, and retrieve application data.',
   },
   {
     id: 8,
@@ -158,6 +165,7 @@ export const CERTIFICATES = [
     date: '28-06-2025',
     image: '/Cyber Security and Privacy.jpg',
     issuer: 'NPTEL',
+    description: 'Developed a stronger understanding of common security threats, privacy concerns, and the practices used to protect digital systems and user information.',
   },
   {
     id: 9,
@@ -165,6 +173,7 @@ export const CERTIFICATES = [
     date: '03-01-2026',
     image: '/InternshipCertificate.jpg',
     issuer: 'Prodigy Infotech',
+    description: 'Worked on practical development tasks and strengthened my ability to translate programming concepts into working solutions while following project requirements.',
   },
   {
     id: 10,
@@ -172,6 +181,7 @@ export const CERTIFICATES = [
     date: '03-02-2026',
     image: '/InternshipCertificate.jpg',
     issuer: 'Cognifyz',
+    description: 'Gained practical development experience by working on assigned technical tasks and applying programming concepts in a structured work environment.',
   },
   {
     id: 11,
@@ -179,6 +189,7 @@ export const CERTIFICATES = [
     date: '03-11-2025',
     image: '/MongoDB.jpg',
     issuer: 'MongoDB University',
+    description: 'Strengthened my understanding of document-oriented databases through practical exploration of collections, documents, queries, and basic database operations.',
   },
   {
     id: 12,
@@ -186,6 +197,7 @@ export const CERTIFICATES = [
     date: '03-03-2026',
     image: '/MongoDB Relational to Document Model.jpg',
     issuer: 'MongoDB University',
+    description: 'Learned how traditional relational data structures can be redesigned for a document-based database, improving my understanding of database modelling approaches.',
   },
   {
     id: 13,
@@ -193,6 +205,7 @@ export const CERTIFICATES = [
     date: '03-06-2026',
     image: '/SQL_basic_certificate.jpg',
     issuer: 'HackerRank',
+    description: 'Practiced writing SQL queries to work with structured data, covering areas such as filtering, aggregation, joins, and data retrieval.',
   },
   {
     id: 14,
@@ -200,6 +213,7 @@ export const CERTIFICATES = [
     date: '03-06-2026',
     image: '/Google Gemini Certificate1.jpg',
     issuer: 'Google',
+    description: 'Explored generative AI capabilities and learned how AI-assisted tools can be incorporated into learning, productivity, and everyday problem-solving.',
   },
   {
     id: 15,
@@ -207,6 +221,7 @@ export const CERTIFICATES = [
     date: '03-06-2026',
     image: '/Introduction to HTML.jpg',
     issuer: 'Infosys',
+    description: 'Strengthened my web development fundamentals by working with HTML structure, elements, attributes, links, forms, and the building blocks of webpages.',
   },
   {
     id: 16,
@@ -214,5 +229,6 @@ export const CERTIFICATES = [
     date: '03-06-2026',
     image: '/NLPCertificate.jpg',
     issuer: 'Anna University',
+    description: 'Explored the fundamentals of Natural Language Processing through a six-day learning experience covering how computational techniques can be used to process and understand human language.',
   }
 ];

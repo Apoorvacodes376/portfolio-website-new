@@ -57,6 +57,9 @@ const CertificateModal = ({ certificate, isOpen, onClose }) => {
                   <p className="text-lg text-light-primary">
                     <span className="text-gray-400 text-light-secondary">Obtained:</span> {certificate.date}
                   </p>
+                  <p className="text-base leading-relaxed text-light-secondary">
+                    {certificate.description}
+                  </p>
                 </div>
               </motion.div>
             </div>
