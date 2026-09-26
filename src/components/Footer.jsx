@@ -4,11 +4,11 @@ import * as FaIcons from 'react-icons/fa';
 
 export const Footer = () => {
   const socialLinks = [
-    { name: 'LinkedIn', icon: 'FaLinkedin', url: '#' },
-    { name: 'GitHub', icon: 'FaGithub', url: '#' },
-    { name: 'LeetCode', icon: 'SiLeetcode', url: '#' },
-    { name: 'Instagram', icon: 'FaInstagram', url: '#' },
-    { name: 'Duolingo', icon: 'SiDuolingo', url: '#' },
+    { name: 'LinkedIn', icon: 'FaLinkedin', url: 'https://www.linkedin.com/in/gvl-apoorva-3061ba328/' },
+    { name: 'GitHub', icon: 'FaGithub', url: 'https://github.com/Apoorvacodes376' },
+    { name: 'LeetCode', icon: 'SiLeetcode', url: 'https://leetcode.com/u/gvlapoorva/' },
+    { name: 'Instagram', icon: 'FaInstagram', url: 'https://www.instagram.com/gvl.apoorva_376/' },
+    { name: 'Duolingo', icon: 'SiDuolingo', url: 'https://www.duolingo.com/profile/Apoorva159362' },
   ];
 
   const getIcon = (iconName) => {
@@ -68,6 +68,9 @@ export const Footer = () => {
                   <motion.a
                     key={social.name}
                     href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit ${social.name}`}
                     className="p-2 bg-gradient-to-r from-blue-500 to-purple-500 bg-opacity-20 rounded-lg text-gray-300 hover:text-white hover-glow border border-blue-500 border-opacity-30 text-light-primary"
                     whileHover={{ scale: 1.2, y: -5 }}
                     whileTap={{ scale: 0.95 }}
