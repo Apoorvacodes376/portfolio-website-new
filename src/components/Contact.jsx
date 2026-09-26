@@ -7,17 +7,39 @@ import * as FaIcons from 'react-icons/fa';
 export const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm(prev => ({ ...prev, [name]: value }));
+    if (error) setError('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-    setForm({ name: '', email: '', message: '' });
+    setSending(true);
+    setError('');
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        throw new Error('Unable to send your message.');
+      }
+
+      setSubmitted(true);
+      setForm({ name: '', email: '', message: '' });
+      setTimeout(() => setSubmitted(false), 3000);
+    } catch (sendError) {
+      setError(sendError.message || 'Unable to send your message. Please try again.');
+    } finally {
+      setSending(false);
+    }
   };
 
   const contactInfo = [
@@ -160,13 +182,20 @@ export const Contact = () => {
               />
             </div>
 
+            {error && (
+              <p role="alert" className="text-sm text-red-300">
+                {error}
+              </p>
+            )}
+
             <motion.button
               type="submit"
-              className="w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg font-semibold hover-glow"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              disabled={sending}
+              className="w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg font-semibold hover-glow disabled:cursor-not-allowed disabled:opacity-70"
+              whileHover={{ scale: sending ? 1 : 1.05 }}
+              whileTap={{ scale: sending ? 1 : 0.95 }}
             >
-              {submitted ? 'Message Sent! ✓' : 'Send Message'}
+              {sending ? 'Sending...' : submitted ? 'Message Sent! ✓' : 'Send Message'}
             </motion.button>
           </motion.form>
         </div>
