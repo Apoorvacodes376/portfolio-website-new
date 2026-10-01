@@ -59,7 +59,7 @@ const CertificateModal = ({ certificate, isOpen, onClose }) => {
                   </p>
                   <div className="mt-5 border-t border-white/10 pt-5">
                     <h4 className="mb-2 font-bold uppercase tracking-wider text-blue-300">Description</h4>
-                    <p className="text-light-secondary">
+                    <p className="certificate-description text-light-secondary">
                       {certificate.description || `This certificate recognizes ${certificate.title.toLowerCase()} from ${certificate.issuer}.`}
                     </p>
                   </div>

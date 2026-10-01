@@ -73,7 +73,7 @@ export const Footer = () => {
                     whileTap={{ scale: 0.95 }}
                     title={social.name}
                   >
-                    {IconComponent && <IconComponent size={18} className="text-light-primary" />}
+                    {IconComponent && <IconComponent size={18} className="footer-social-icon text-light-primary" />}
                   </motion.a>
                 );
               })}

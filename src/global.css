@@ -242,3 +242,35 @@ html[data-theme='light'] svg {
 html[data-theme='light'] .text-white {
   color: #1a1a1a;
 }
+
+html[data-theme='light'] .project-modal {
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+html[data-theme='light'] .project-modal .text-gray-300,
+html[data-theme='light'] .project-modal .text-light-primary {
+  color: #1a1a1a;
+}
+
+html[data-theme='light'] .project-modal .bg-blue-500.bg-opacity-20 {
+  color: #374151;
+}
+
+html[data-theme='light'] .certificate-description {
+  color: #ffffff;
+}
+
+html[data-theme='light'] #certificates button {
+  color: #1f2937;
+  border-color: #374151;
+}
+
+html[data-theme='light'] .achievement-timeline-dot {
+  box-shadow: 0 0 0 4px #ffffff;
+}
+
+html[data-theme='light'] .contact-social-icon,
+html[data-theme='light'] .footer-social-icon {
+  color: #ffffff;
+}

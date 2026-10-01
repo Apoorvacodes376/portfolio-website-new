@@ -25,7 +25,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           <div className="absolute inset-0 bg-black bg-opacity-50 blur-sm" />
 
           <motion.div
-            className="relative bg-gray-900 rounded-2xl max-w-2xl w-full max-h-96 overflow-y-auto"
+            className="project-modal relative bg-gray-900 rounded-2xl max-w-2xl w-full max-h-96 overflow-y-auto"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
