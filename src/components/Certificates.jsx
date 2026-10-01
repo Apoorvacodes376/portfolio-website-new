@@ -113,7 +113,7 @@ export const Certificates = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {CERTIFICATES.slice(0, showAllCertificates ? CERTIFICATES.length : 6).map((cert) => (
+          {[...CERTIFICATES].reverse().slice(0, showAllCertificates ? CERTIFICATES.length : 6).map((cert) => (
             <motion.div
               key={cert.id}
               className="glass rounded-lg overflow-hidden hover-glow group cursor-pointer"
