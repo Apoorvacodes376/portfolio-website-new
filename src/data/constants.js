@@ -57,7 +57,7 @@ export const PROJECTS = [
     techStack: ['HTML', 'CSS', 'JavaScript'],
     github: 'https://github.com/Apoorvacodes376/EventQueue-Studios',
     demo: 'https://apoorvacodes376.github.io/EventQueue-Studios/',
-    fullDescription: 'EventQueue is a frontend event management website designed to provide a simple and user-friendly experience for discovering and exploring events. Users can browse upcoming events, view detailed information such as dates, venues, and descriptions, and navigate through different sections of the platform.The project also includes a frontend-based event registration/RSVP simulation, where users can interact with registration buttons without requiring a backend or database. The website focuses on creating a realistic event-platform flow while keeping the implementation lightweight.Built as a multi-page responsive website, the project emphasizes clean UI/UX, intuitive navigation, responsive layouts, and JavaScript-based interactivity.Tech Stack: HTML5, CSS3, Vanilla JavaScript Key Features: Event listing, event details, event discovery, RSVP simulation, multi-page navigation, responsive design, and interactive UI elements.',
+    fullDescription: 'EventQueue is a frontend event management website designed to provide a simple and user-friendly experience for discovering and exploring events. Users can browse upcoming events, view detailed information such as dates, venues, and descriptions, and navigate through different sections of the platform. The project also includes a frontend-based event registration/RSVP simulation, where users can interact with registration buttons without requiring a backend or database. The website focuses on creating a realistic event-platform flow while keeping the implementation lightweight. Built as a multi-page responsive website, the project emphasizes clean UI/UX, intuitive navigation, responsive layouts, and JavaScript-based interactivity. Tech Stack: HTML5, CSS3, Vanilla JavaScript. Key Features: Event listing, event details, event discovery, RSVP simulation, multi-page navigation, responsive design, and interactive UI elements.',
   },
   {
     id: 2,
@@ -67,7 +67,7 @@ export const PROJECTS = [
     techStack: ['HTML', 'CSS', 'JavaScript'],
     github: 'https://github.com/Apoorvacodes376/Portfolio-website',
     demo: 'https://apoorvacodes376.github.io/Portfolio-website/index.html',
-    fullDescription: 'A personal portfolio website built from scratch to practice and master HTML, CSS, and JavaScript.',
+    fullDescription: 'A personal portfolio website built from scratch using HTML, CSS, and JavaScript to showcase my profile, skills, projects, certificates, and other professional information. The website follows a multi-page structure with dedicated sections for About, Skills, Certificates, Resume, and Contact. The project focuses on building a clean and responsive personal website while strengthening my understanding of webpage structure, CSS styling, navigation, JavaScript-based interactions, and basic frontend design. Tech Stack: HTML5, CSS3, Vanilla JavaScript. Key Features: Personal profile, About section, Skills showcase, Projects/Certificates, Resume section, Contact page, responsive styling, and interactive navigation.',
   },
   {
     id: 3,
@@ -77,7 +77,7 @@ export const PROJECTS = [
     techStack: ['React', 'Node.js', 'MongoDB'],
     github: 'https://github.com',
     demo: 'https://demo.com',
-    fullDescription: 'A platform connecting citizens, municipalities, and recycling plants for efficient waste management.',
+    fullDescription: 'Smart Waste is an intelligent municipal waste management platform that combines IoT, AI, multi-agent coordination, and blockchain to improve the way waste is monitored, collected, and processed. The system connects citizens, municipalities, and recycling facilities through dedicated web portals. IoT-enabled smart bins provide information such as fill level, waste type, and location, which is processed by AI models to support waste prediction, collection planning, and route optimization. A blockchain layer provides transparent and tamper-resistant records for important waste-management activities, improving traceability and accountability across stakeholders. The platform was developed with a React/Vite frontend, FastAPI/Python backend, Supabase PostgreSQL database, Ethereum/Ganache blockchain, and machine-learning models including Random Forest. Key Features: Smart-bin monitoring, AI-based waste prediction, route optimization, municipal dashboards, citizen interaction, recycling-facility tracking, blockchain-based records, alerts, and transparent waste lifecycle management.',
   },
 
   {
@@ -88,7 +88,7 @@ export const PROJECTS = [
     techStack: ['React', 'Express', 'MongoDB'],
     github: 'https://github.com/Apoorvacodes376/MeritMind-HackHerThon',
     demo: 'https://frontend-bice-beta-56.vercel.app/',
-    fullDescription: 'A recruitment platform designed to eliminate bias in the hiring process.',
+    fullDescription: "MeritMind is a recruitment platform designed to make the hiring process more objective and reduce potential bias in candidate evaluation. The platform supports separate candidate and recruiter roles, allowing candidates to upload resumes and interact with job opportunities while recruiters can manage job descriptions and evaluate applicants. The system uses a React/Vite frontend and Python FastAPI backend, with PostgreSQL and SQLAlchemy for data management. The backend is structured around authentication, job-description processing, resume handling, recruitment agents, and explainable results. The project was developed during HackHERthon'26, focusing on combining practical recruitment workflows with AI-assisted candidate evaluation. Tech Stack: React, Vite, Python, FastAPI, PostgreSQL, SQLAlchemy. Key Features: Candidate/recruiter authentication, resume uploads, job-description processing, candidate evaluation, bias analysis, and explainable recruitment results.",
   },
   {
     id: 5,
@@ -98,7 +98,7 @@ export const PROJECTS = [
     techStack: ['React', 'Node.js', 'PostgreSQL'],
     github: 'https://github.com/jashwanth0420/TrustCart',
     demo: 'https://trust-cart-vx6b.vercel.app/',
-    fullDescription: 'A secure e-commerce platform with advanced security features and encryption.',
+    fullDescription: "TrustCart is a security-focused e-commerce platform built to make online shopping more trustworthy while adding interactive features beyond a conventional shopping website. It brings together buyers, sellers, and administrators, with features for product discovery, shopping, transactions, and real-time communication. The platform includes fraud monitoring and alerts, secure transaction handling, buyer–seller/admin communication, real-time family/group chat using Socket.IO, and transaction-status updates. It also incorporates interactive elements such as a honeypot maze, product video uploads, theme customization, and arcade-style games to create a more engaging shopping experience. The project was developed during Yet Another Hackathon'26, with a MERN-based architecture and real-time communication capabilities. Tech Stack: React, Node.js, Express.js, MongoDB, Socket.IO. Key Features: E-commerce platform, fraud monitoring, security-focused transactions, buyer–seller chat, family/group chat, transaction updates, product video uploads, interactive security features, and gamified elements.",
   },
 ];
 
