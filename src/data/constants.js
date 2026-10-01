@@ -75,7 +75,7 @@ export const PROJECTS = [
     id: 3,
     title: 'Smart Waste',
     description: 'Smart waste management platform',
-    image: 'https://kommodo.ai/i/auuWBR5pnmfwVRmbMFxn',
+    image: 'https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/wubznyb8f4m4bsud5njd',
     techStack: ['React', 'Vite', 'FastAPI', 'Python', 'Supabase PostgreSQL', 'Ethereum', 'Ganache', 'Random Forest'],
     github: 'https://github.com',
     demo: 'https://demo.com',
