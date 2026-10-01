@@ -141,14 +141,14 @@ export const CERTIFICATES = [
     title: "HackHERthon'26",
     date: '14-04-2026',
     image: '/WhatsApp Image 2026-06-21 at 6.39.41 PM.jpeg',
-    issuer: 'HackHERthon',
+    issuer: 'SVCE EPIC, WEC',
   },
   {
     id: 6,
     title: "Yet Another Hackathon'26",
     date: '23-02-2026',
-    image: '/WhatsApp Image 2026-06-21 at 6.39.41 PM.jpeg',
-    issuer: 'Yet Another Hackathon',
+    image: '/YAH-FristionZero.jpeg',
+    issuer: 'SVCE ACM- Student Chapter',
   },
   {
     id: 7,
@@ -175,7 +175,7 @@ export const CERTIFICATES = [
     id: 10,
     title: 'Cognifyz Internship',
     date: '03-02-2026',
-    image: '/InternshipCertificate.jpg',
+    image: '/CognifyzCertificateOfCompletion.jpg',
     issuer: 'Cognifyz',
   },
   {
