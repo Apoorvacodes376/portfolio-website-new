@@ -57,7 +57,7 @@ export const PROJECTS = [
     techStack: ['HTML', 'CSS', 'JavaScript'],
     github: 'https://github.com/Apoorvacodes376/EventQueue-Studios',
     demo: 'https://apoorvacodes376.github.io/EventQueue-Studios/',
-    fullDescription: 'EventQueue demonstrates how a real-world event listing and registration platform can be visually and functionally represented using frontend technologies alone. The website allows users to explore events and navigate between different pages smoothly while keeping the scope simple and achievable.The project emphasizes: UI/UX design Frontend logic Basic interactivity using JavaScript',
+    fullDescription: 'EventQueue is a frontend event management website designed to provide a simple and user-friendly experience for discovering and exploring events. Users can browse upcoming events, view detailed information such as dates, venues, and descriptions, and navigate through different sections of the platform.The project also includes a frontend-based event registration/RSVP simulation, where users can interact with registration buttons without requiring a backend or database. The website focuses on creating a realistic event-platform flow while keeping the implementation lightweight.Built as a multi-page responsive website, the project emphasizes clean UI/UX, intuitive navigation, responsive layouts, and JavaScript-based interactivity.Tech Stack: HTML5, CSS3, Vanilla JavaScript Key Features: Event listing, event details, event discovery, RSVP simulation, multi-page navigation, responsive design, and interactive UI elements.',
   },
   {
     id: 2,
