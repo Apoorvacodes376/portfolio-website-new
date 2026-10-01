@@ -62,7 +62,7 @@ export const Footer = () => {
           >
             <h3 className="text-white font-semibold mb-4 text-light-primary">Connect</h3>
             <div className="flex gap-3 flex-wrap">
-              {soialLinks.map((social) => {
+              {socialLinks .map((social) => {
                 const IconComponent = getIcon(social.icon);
                 return (
                   <motion.a
