@@ -57,6 +57,12 @@ const CertificateModal = ({ certificate, isOpen, onClose }) => {
                   <p className="text-lg text-light-primary">
                     <span className="text-gray-400 text-light-secondary">Obtained:</span> {certificate.date}
                   </p>
+                  <div className="mt-5 border-t border-white/10 pt-5">
+                    <h4 className="mb-2 font-bold uppercase tracking-wider text-blue-300">Description</h4>
+                    <p className="text-light-secondary">
+                      {certificate.description || `This certificate recognizes ${certificate.title.toLowerCase()} from ${certificate.issuer}.`}
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             </div>
@@ -69,6 +75,7 @@ const CertificateModal = ({ certificate, isOpen, onClose }) => {
 
 export const Certificates = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null);
+  const [showAllCertificates, setShowAllCertificates] = useState(false);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -105,7 +112,7 @@ export const Certificates = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {CERTIFICATES.map((cert) => (
+          {CERTIFICATES.slice(0, showAllCertificates ? CERTIFICATES.length : 6).map((cert) => (
             <motion.div
               key={cert.id}
               className="glass rounded-lg overflow-hidden hover-glow group cursor-pointer"
@@ -144,6 +151,18 @@ export const Certificates = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        {CERTIFICATES.length > 6 && (
+          <div className="mt-10 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setShowAllCertificates((visible) => !visible)}
+              className="rounded-full border border-blue-400/60 px-6 py-3 font-semibold text-blue-200 transition hover:bg-blue-500/20 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            >
+              {showAllCertificates ? 'Show Less' : 'Show More'}
+            </button>
+          </div>
+        )}
       </div>
 
       <CertificateModal
