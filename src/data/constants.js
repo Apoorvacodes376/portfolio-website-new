@@ -182,7 +182,7 @@ export const CERTIFICATES = [
     id: 11,
     title: "Yet Another Hackathon'26",
     date: '23-02-2026',
-    image: '/YAH-FristionZero.jpeg',
+    image: '/YAH-FrictionZero.jpeg',
     issuer: 'SVCE ACM- Student Chapter',
   },
   {
