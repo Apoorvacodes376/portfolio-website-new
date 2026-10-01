@@ -25,7 +25,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           <div className="absolute inset-0 bg-black bg-opacity-50 blur-sm" />
 
           <motion.div
-            className="relative bg-gray-900 rounded-2xl max-w-2xl w-full max-h-96 overflow-y-auto"
+            className="project-modal relative bg-gray-900 rounded-2xl max-w-2xl w-full max-h-96 overflow-y-auto"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
@@ -39,11 +39,20 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             </button>
 
             <div className="p-8">
-              <h3 className="text-3xl font-bold gradient-text mb-4 font-heading text-light-primary">{project.title}</h3>
-              <p className="text-gray-300 mb-6 text-light-primary">{project.fullDescription}</p>
+              <img
+                src={project.image}
+                alt={`${project.title} preview`}
+                className="mb-6 h-56 w-full rounded-xl object-cover"
+              />
+              <h3 className="text-3xl font-bold gradient-text mb-6 font-heading text-light-primary">{project.title}</h3>
 
-              <div className="mb-6">
-                <p className="text-sm text-gray-400 mb-2 text-light-secondary">Tech Stack:</p>
+              <section className="mb-6">
+                <h4 className="mb-2 text-sm font-bold uppercase tracking-wider text-blue-300">Description</h4>
+                <p className="text-gray-300 text-light-primary">{project.descriptionText}</p>
+              </section>
+
+              <section className="mb-6">
+                <h4 className="mb-2 text-sm font-bold uppercase tracking-wider text-blue-300">Tech Stack</h4>
                 <div className="flex flex-wrap gap-2">
                   {project.techStack.map((tech) => (
                     <span key={tech} className="px-3 py-1 bg-blue-500 bg-opacity-20 border border-blue-500 rounded-full text-sm">
@@ -51,7 +60,12 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     </span>
                   ))}
                 </div>
-              </div>
+              </section>
+
+              <section className="mb-6">
+                <h4 className="mb-2 text-sm font-bold uppercase tracking-wider text-blue-300">Key Features</h4>
+                <p className="text-gray-300 text-light-primary">{project.features}</p>
+              </section>
 
               <div className="flex gap-4">
                 <a

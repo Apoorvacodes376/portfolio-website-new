@@ -136,7 +136,7 @@ export const Achievements = () => {
                     className="hidden md:flex md:col-start-2 md:row-start-1 justify-center"
                     whileHover={{ scale: 1.3 }}
                   >
-                    <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full ring-4 ring-gray-900" />
+                    <div className="achievement-timeline-dot w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full ring-4 ring-gray-900" />
                   </motion.div>
                 </motion.div>
               );

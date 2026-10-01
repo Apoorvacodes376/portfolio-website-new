@@ -101,7 +101,7 @@ export const Contact = () => {
                       whileTap={{ scale: 0.95 }}
                       title={social.name}
                     >
-                      {IconComponent && <IconComponent size={20} className="text-light-primary" />}
+                      {IconComponent && <IconComponent size={20} className="contact-social-icon text-light-primary" />}
                     </motion.a>
                   );
                 })}

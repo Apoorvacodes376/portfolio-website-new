@@ -4,11 +4,11 @@ import * as FaIcons from 'react-icons/fa';
 
 export const Footer = () => {
   const socialLinks = [
-    { name: 'LinkedIn', icon: 'FaLinkedin', url: '#' },
-    { name: 'GitHub', icon: 'FaGithub', url: '#' },
-    { name: 'LeetCode', icon: 'SiLeetcode', url: '#' },
-    { name: 'Instagram', icon: 'FaInstagram', url: '#' },
-    { name: 'Duolingo', icon: 'SiDuolingo', url: '#' },
+    { name: 'LinkedIn', icon: 'FaLinkedin', url: 'https://www.linkedin.com/in/gvl-apoorva-3061ba328/' },
+    { name: 'GitHub', icon: 'FaGithub', url: 'https://github.com/Apoorvacodes376' },
+    { name: 'LeetCode', icon: 'SiLeetcode', url: 'https://leetcode.com/u/gvlapoorva/' },
+    { name: 'Instagram', icon: 'FaInstagram', url: 'https://www.instagram.com/gvl.apoorva_376/' },
+    { name: 'Duolingo', icon: 'SiDuolingo', url: 'https://www.duolingo.com/profile/Apoorva159362' },
   ];
 
   const getIcon = (iconName) => {
@@ -62,7 +62,7 @@ export const Footer = () => {
           >
             <h3 className="text-white font-semibold mb-4 text-light-primary">Connect</h3>
             <div className="flex gap-3 flex-wrap">
-              {socialLinks.map((social) => {
+              {socialLinks .map((social) => {
                 const IconComponent = getIcon(social.icon);
                 return (
                   <motion.a
@@ -73,7 +73,7 @@ export const Footer = () => {
                     whileTap={{ scale: 0.95 }}
                     title={social.name}
                   >
-                    {IconComponent && <IconComponent size={18} className="text-light-primary" />}
+                    {IconComponent && <IconComponent size={18} className="footer-social-icon text-light-primary" />}
                   </motion.a>
                 );
               })}
