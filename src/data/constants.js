@@ -53,7 +53,7 @@ export const PROJECTS = [
     id: 1,
     title: 'EventQueue',
     description: 'Event management website',
-    image: 'https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/jaafjgsrctoajtrnb985',
+    image: 'https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/bp68qm0bjsrxwi71tu6u',
     techStack: ['HTML5', 'CSS3', 'Vanilla JavaScript'],
     github: 'https://github.com/Apoorvacodes376/EventQueue-Studios',
     demo: 'https://apoorvacodes376.github.io/EventQueue-Studios/',
