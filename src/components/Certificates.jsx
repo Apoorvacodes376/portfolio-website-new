@@ -76,6 +76,7 @@ const CertificateModal = ({ certificate, isOpen, onClose }) => {
 export const Certificates = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null);
   const [showAllCertificates, setShowAllCertificates] = useState(false);
+  const orderedCertificates = [...CERTIFICATES].sort((a, b) => b.id - a.id);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -113,7 +114,7 @@ export const Certificates = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {[...CERTIFICATES].reverse().slice(0, showAllCertificates ? CERTIFICATES.length : 6).map((cert) => (
+          {orderedCertificates.slice(0, showAllCertificates ? orderedCertificates.length : 6).map((cert) => (
             <motion.div
               key={cert.id}
               className="glass rounded-lg overflow-hidden hover-glow group cursor-pointer"
