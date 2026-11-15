@@ -220,4 +220,18 @@ export const CERTIFICATES = [
     image: '/LeetCode_100days.png',
     issuer: 'LeetCode',
   },
+  {
+    id: 17,
+    title: 'Smart India Hackathon 2026 Certificate of Appreciation',
+    date: '16-09-2026',
+    image: '/SIH26.jpeg',
+    issuer: 'Sri Venkateswara College of Engineering',
+  },
+  {
+    id: 18,
+    title: '200 Day LeetCode Badge',
+    date: '2026',
+    image: '/LeetCode_200days.png',
+    issuer: 'LeetCode',
+  },
 ];
