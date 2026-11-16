@@ -233,6 +233,10 @@ html[data-theme='light'] .text-gray-500 {
   color: #9ca3af;
 }
 
+html[data-theme='light'] #projects .text-blue-200 {
+  color: #1e3a8a;
+}
+
 /* Icons theme-aware */
 html[data-theme='light'] svg {
   color: inherit;
